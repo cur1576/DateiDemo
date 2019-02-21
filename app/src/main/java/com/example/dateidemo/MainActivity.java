@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
              OutputStreamWriter osw = new OutputStreamWriter(fos)) {
             osw.write(text);
         } catch (FileNotFoundException e) {
-            Log.e(TAG, "save: Datei nocht gefunden",e );
+            Log.e(TAG, "save: Datei nicht gefunden",e );
         } catch (IOException e) {
             Log.e(TAG, "save: Error",e );
         }
