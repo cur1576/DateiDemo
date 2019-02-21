@@ -2,6 +2,7 @@ package com.example.dateidemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
              OutputStreamWriter osw = new OutputStreamWriter(fos)) {
             osw.write(text);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "save: Datei nocht gefunden",e );
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "save: Error",e );
         }
         ;
     }
